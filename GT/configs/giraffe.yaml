@@ -1,0 +1,9 @@
+ingroup: GCam
+results_subdir: giraffe
+ref:
+  name: RothschildsGiraffe
+  fa: /projects/seqafrica/people/zlc187/mapping/genomes/RothschildsGiraffe.fasta
+  fai: /projects/seqafrica/people/zlc187/mapping/genomes/RothschildsGiraffe.fasta.fai
+sites:  /maps/projects/seqafrica/people/pls394/others/giraffe/reference/autosome_rep_het_dep.bed
+tsv: tsvs/giraffe.tsv
+populations: tsvs/giraffe_populations.tsv
