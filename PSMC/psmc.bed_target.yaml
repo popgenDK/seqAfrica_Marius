@@ -1,0 +1,374 @@
+## LINK TO SLIDES / MANUAL:
+## SOFTWARE
+PSMC_DIR: "/home/pls394/Software/psmc"
+BCFTOOLS: "/projects/scarball/apps/Modules/software/bcftools/1.16/bin/bcftools"
+VCFUTILS: "/projects/scarball/apps/Modules/software/bcftools/1.16/bin/vcfutils.pl"
+ALLELE_SUPPORT: 2 # 1 3
+MIN_MQ: 30
+MIN_BQ: 30
+OUTDIR: /projects/seqafrica/people/pls394/others/giraffe/PSMC_rmROH/output
+REF: "/maps/projects/seqafrica/people/pls394/others/giraffe/reference/RothschildsGiraffe.fasta" 
+
+
+## see github for a script to make config
+
+GOODBED:
+  Angolan_1: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaC_7979.exclud.ROH.bed
+  Angolan_10: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaNENP20.exclud.ROH.bed
+  Angolan_11: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaWNB102.exclud.ROH.bed
+  Angolan_12: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaWNB110.exclud.ROH.bed
+  Angolan_2: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaC_7980.exclud.ROH.bed
+  Angolan_3: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaC_7981.exclud.ROH.bed
+  Angolan_4: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaC_7982.exclud.ROH.bed
+  Angolan_5: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaN_2310.exclud.ROH.bed
+  Angolan_6: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaN_2318.exclud.ROH.bed
+  Angolan_7: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaNENP11.exclud.ROH.bed
+  Angolan_8: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaNENP16.exclud.ROH.bed
+  Angolan_9: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaNENP19.exclud.ROH.bed
+  Kordofan_1: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamCdEGNP01.exclud.ROH.bed
+  Kordofan_2: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamCdEGNP04.exclud.ROH.bed
+  Kordofan_3: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamCdEGNP05.exclud.ROH.bed
+  Kordofan_4: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamSsC_SNR2.exclud.ROH.bed
+  Masai_1: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeW__MA1.exclud.ROH.bed
+  Masai_2: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzC_9074.exclud.ROH.bed
+  Masai_3: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzC_9108.exclud.ROH.bed
+  Masai_4: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzC_9109.exclud.ROH.bed
+  Masai_5: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzC_9110.exclud.ROH.bed
+  Masai_6: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzW_3369.exclud.ROH.bed
+  Nubian_1: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamEtW_ETH1.exclud.ROH.bed
+  Nubian_2: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamEtW_ETH2.exclud.ROH.bed
+  Nubian_3: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamEtW_ETH3.exclud.ROH.bed
+  Nubian_4: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeW_7737.exclud.ROH.bed
+  Nubian_5: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamUgN_1236.exclud.ROH.bed
+  Nubian_6: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamUgW_MF06.exclud.ROH.bed
+  Nubian_7: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamUgW_MF22.exclud.ROH.bed
+  Nubian_8: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamUgW_MF24.exclud.ROH.bed
+  Reticulated_1: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7725.exclud.ROH.bed
+  Reticulated_10: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7735.exclud.ROH.bed
+  Reticulated_11: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeEISC04.exclud.ROH.bed
+  Reticulated_12: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeEISC08.exclud.ROH.bed
+  Reticulated_2: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7726.exclud.ROH.bed
+  Reticulated_3: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7727.exclud.ROH.bed
+  Reticulated_4: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7728.exclud.ROH.bed
+  Reticulated_5: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7729.exclud.ROH.bed
+  Reticulated_6: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7730.exclud.ROH.bed
+  Reticulated_7: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7731.exclud.ROH.bed
+  Reticulated_8: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7733.exclud.ROH.bed
+  Reticulated_9: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamKeC_7734.exclud.ROH.bed
+  SA_Central_1: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamBwN__573.exclud.ROH.bed
+  SA_Central_2: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamBwN__574.exclud.ROH.bed
+  SA_Central_3: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamBwN__575.exclud.ROH.bed
+  SA_Central_4: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamBwN__V23.exclud.ROH.bed
+  SA_Central_5: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamBwN_2253.exclud.ROH.bed
+  SA_Central_6: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNaEBNP02.exclud.ROH.bed
+  SA_Central_7: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZmSTNP09.exclud.ROH.bed
+  SA_Central_8: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZw___568.exclud.ROH.bed
+  Selous_1: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzESGR01.exclud.ROH.bed
+  Selous_2: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzESGR05.exclud.ROH.bed
+  Selous_3: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzESGR07.exclud.ROH.bed
+  Selous_4: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzESGR13.exclud.ROH.bed
+  Selous_5: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamTzESGR14.exclud.ROH.bed
+  Southern_African_1: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZmS_SUN3.exclud.ROH.bed
+  Southern_African_10: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1555.exclud.ROH.bed
+  Southern_African_11: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1556.exclud.ROH.bed
+  Southern_African_12: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1557.exclud.ROH.bed
+  Southern_African_2: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1545.exclud.ROH.bed
+  Southern_African_4: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1547.exclud.ROH.bed
+  Southern_African_5: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1548.exclud.ROH.bed
+  Southern_African_6: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1550.exclud.ROH.bed
+  Southern_African_7: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1551.exclud.ROH.bed
+  Southern_African_8: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1552.exclud.ROH.bed
+  Southern_African_9: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamZwS_1554.exclud.ROH.bed
+  West_African_1: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNeWWA720.exclud.ROH.bed
+  West_African_2: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNeWWA733.exclud.ROH.bed
+  West_African_3: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNeWWA746.exclud.ROH.bed
+  West_African_4: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNeWWA806.exclud.ROH.bed
+  West_African_5: /maps/projects/seqafrica/people/pls394/others/giraffe/PSMC/excludeROH_bed/GCamNeWWA808.exclud.ROH.bed
+
+SAMPLES:
+  Angolan_1: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamNaC_7979.RothschildsGiraffe.bam
+  Angolan_10: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNaNENP20.RothschildsGiraffe.bam
+  Angolan_11: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNaWNB102.RothschildsGiraffe.bam
+  Angolan_12: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNaWNB110.RothschildsGiraffe.bam
+  Angolan_2: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamNaC_7980.RothschildsGiraffe.bam
+  Angolan_3: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamNaC_7981.RothschildsGiraffe.bam
+  Angolan_4: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamNaC_7982.RothschildsGiraffe.bam
+  Angolan_5: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamNaN_2310.RothschildsGiraffe.bam
+  Angolan_6: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamNaN_2318.RothschildsGiraffe.bam
+  Angolan_7: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNaNENP11.RothschildsGiraffe.bam
+  Angolan_8: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNaNENP16.RothschildsGiraffe.bam
+  Angolan_9: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNaNENP19.RothschildsGiraffe.bam
+  Kordofan_1: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamCdEGNP01.RothschildsGiraffe.bam
+  Kordofan_2: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamCdEGNP04.RothschildsGiraffe.bam
+  Kordofan_3: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamCdEGNP05.RothschildsGiraffe.bam
+  Kordofan_4: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamSsC_SNR2.RothschildsGiraffe.bam
+  Masai_1: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeW__MA1.RothschildsGiraffe.bam
+  Masai_2: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamTzC_9074.RothschildsGiraffe.bam
+  Masai_3: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamTzC_9108.RothschildsGiraffe.bam
+  Masai_4: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamTzC_9109.RothschildsGiraffe.bam
+  Masai_5: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamTzC_9110.RothschildsGiraffe.bam
+  Masai_6: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamTzW_3369.RothschildsGiraffe.bam
+  Nubian_1: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamEtW_ETH1.RothschildsGiraffe.bam
+  Nubian_2: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamEtW_ETH2.RothschildsGiraffe.bam
+  Nubian_3: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamEtW_ETH3.RothschildsGiraffe.bam
+  Nubian_4: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeW_7737.RothschildsGiraffe.bam
+  Nubian_5: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamUgN_1236.RothschildsGiraffe.bam
+  Nubian_6: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamUgW_MF06.RothschildsGiraffe.bam
+  Nubian_7: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamUgW_MF22.RothschildsGiraffe.bam
+  Nubian_8: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamUgW_MF24.RothschildsGiraffe.bam
+  Reticulated_1: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7725.RothschildsGiraffe.bam
+  Reticulated_10: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7735.RothschildsGiraffe.bam
+  Reticulated_11: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamKeEISC04.RothschildsGiraffe.bam
+  Reticulated_12: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamKeEISC08.RothschildsGiraffe.bam
+  Reticulated_2: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7726.RothschildsGiraffe.bam
+  Reticulated_3: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7727.RothschildsGiraffe.bam
+  Reticulated_4: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7728.RothschildsGiraffe.bam
+  Reticulated_5: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7729.RothschildsGiraffe.bam
+  Reticulated_6: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7730.RothschildsGiraffe.bam
+  Reticulated_7: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7731.RothschildsGiraffe.bam
+  Reticulated_8: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7733.RothschildsGiraffe.bam
+  Reticulated_9: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamKeC_7734.RothschildsGiraffe.bam
+  SA_Central_1: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamBwN__573.RothschildsGiraffe.bam
+  SA_Central_2: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamBwN__574.RothschildsGiraffe.bam
+  SA_Central_3: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamBwN__575.RothschildsGiraffe.bam
+  SA_Central_4: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamBwN__V23.RothschildsGiraffe.bam
+  SA_Central_5: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamBwN_2253.RothschildsGiraffe.bam
+  SA_Central_6: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNaEBNP02.RothschildsGiraffe.bam
+  SA_Central_7: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamZmSTNP09.RothschildsGiraffe.bam
+  SA_Central_8: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZw___568.RothschildsGiraffe.bam
+  Selous_1: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamTzESGR01.RothschildsGiraffe.bam
+  Selous_2: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamTzESGR05.RothschildsGiraffe.bam
+  Selous_3: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamTzESGR07.RothschildsGiraffe.bam
+  Selous_4: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamTzESGR13.RothschildsGiraffe.bam
+  Selous_5: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamTzESGR14.RothschildsGiraffe.bam
+  Southern_African_1: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamZmS_SUN3.RothschildsGiraffe.bam
+  Southern_African_10: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1555.RothschildsGiraffe.bam
+  Southern_African_11: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1556.RothschildsGiraffe.bam
+  Southern_African_12: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1557.RothschildsGiraffe.bam
+  Southern_African_2: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1545.RothschildsGiraffe.bam
+  Southern_African_4: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1547.RothschildsGiraffe.bam
+  Southern_African_5: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1548.RothschildsGiraffe.bam
+  Southern_African_6: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1550.RothschildsGiraffe.bam
+  Southern_African_7: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1551.RothschildsGiraffe.bam
+  Southern_African_8: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1552.RothschildsGiraffe.bam
+  Southern_African_9: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_1/GCamZwS_1554.RothschildsGiraffe.bam
+  West_African_1: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNeWWA720.RothschildsGiraffe.bam
+  West_African_2: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNeWWA733.RothschildsGiraffe.bam
+  West_African_3: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNeWWA746.RothschildsGiraffe.bam
+  West_African_4: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNeWWA806.RothschildsGiraffe.bam
+  West_African_5: /maps/projects/seqafrica/scratch/mapping/giraffes/batch_2/GCamNeWWA808.RothschildsGiraffe.bam
+
+DEPTHS:
+  Angolan_1:
+   - 8
+   - 34
+  Angolan_10:
+   - 8
+   - 34
+  Angolan_11:
+   - 8
+   - 31
+  Angolan_12:
+   - 8
+   - 34
+  Angolan_2:
+   - 8
+   - 36
+  Angolan_3:
+   - 8
+   - 43
+  Angolan_4:
+   - 8
+   - 37
+  Angolan_5:
+   - 8
+   - 39
+  Angolan_6:
+   - 8
+   - 39
+  Angolan_7:
+   - 8
+   - 39
+  Angolan_8:
+   - 8
+   - 37
+  Angolan_9:
+   - 8
+   - 41
+  Kordofan_1:
+   - 8
+   - 31
+  Kordofan_2:
+   - 8
+   - 35
+  Kordofan_3:
+   - 8
+   - 37
+  Kordofan_4:
+   - 8
+   - 32
+  Masai_1:
+   - 10
+   - 63
+  Masai_2:
+   - 8
+   - 31
+  Masai_3:
+   - 8
+   - 44
+  Masai_4:
+   - 8
+   - 39
+  Masai_5:
+   - 8
+   - 45
+  Masai_6:
+   - 8
+   - 24
+  Nubian_1:
+   - 8
+   - 40
+  Nubian_2:
+   - 8
+   - 31
+  Nubian_3:
+   - 8
+   - 32
+  Nubian_4:
+   - 8
+   - 47
+  Nubian_5:
+   - 8
+   - 36
+  Nubian_6:
+   - 8
+   - 32
+  Nubian_7:
+   - 8
+   - 48
+  Nubian_8:
+   - 8
+   - 50
+  Reticulated_1:
+   - 8
+   - 42
+  Reticulated_10:
+   - 8
+   - 43
+  Reticulated_11:
+   - 8
+   - 28
+  Reticulated_12:
+   - 8
+   - 42
+  Reticulated_2:
+   - 8
+   - 44
+  Reticulated_3:
+   - 8
+   - 42
+  Reticulated_4:
+   - 8
+   - 42
+  Reticulated_5:
+   - 8
+   - 48
+  Reticulated_6:
+   - 8
+   - 47
+  Reticulated_7:
+   - 8
+   - 36
+  Reticulated_8:
+   - 8
+   - 46
+  Reticulated_9:
+   - 8
+   - 45
+  SA_Central_1:
+   - 8
+   - 36
+  SA_Central_2:
+   - 8
+   - 31
+  SA_Central_3:
+   - 8
+   - 25
+  SA_Central_4:
+   - 8
+   - 34
+  SA_Central_5:
+   - 8
+   - 42
+  SA_Central_6:
+   - 8
+   - 25
+  SA_Central_7:
+   - 8
+   - 28
+  SA_Central_8:
+   - 8
+   - 45
+  Selous_1:
+   - 8
+   - 32
+  Selous_2:
+   - 8
+   - 49
+  Selous_3:
+   - 8
+   - 31
+  Selous_4:
+   - 8
+   - 39
+  Selous_5:
+   - 9
+   - 55
+  Southern_African_1:
+   - 8
+   - 35
+  Southern_African_10:
+   - 8
+   - 41
+  Southern_African_11:
+   - 8
+   - 40
+  Southern_African_12:
+   - 8
+   - 42
+  Southern_African_2:
+   - 8
+   - 35
+  Southern_African_4:
+   - 8
+   - 40
+  Southern_African_5:
+   - 8
+   - 40
+  Southern_African_6:
+   - 8
+   - 37
+  Southern_African_7:
+   - 8
+   - 38
+  Southern_African_8:
+   - 8
+   - 29
+  Southern_African_9:
+   - 8
+   - 47
+  West_African_1:
+   - 8
+   - 34
+  West_African_2:
+   - 8
+   - 29
+  West_African_3:
+   - 8
+   - 26
+  West_African_4:
+   - 8
+   - 33
+  West_African_5:
+   - 8
+   - 32
